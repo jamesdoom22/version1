@@ -29,8 +29,8 @@ ul li .slide{
   left: 0;
   width: 100%;
   height: 100%;
-  transition: 5s;
-  transform: rotateY(90deg);
+  transition: transform 0.5s;
+  transform: rotateY(0deg);
   transform-origin: left;
 }
 ul li input[type="radio"]{
@@ -40,9 +40,9 @@ ul li input[type="radio"]{
   width: 20px;
 }
 ul li input[type="radio"]:checked ~ .slide{
-  transition: 5s;
-  transform: rotateY(90deg);
-  transform-origin: right;
+  transition: transform 0.5s;
+  transform: rotateY(0deg);
+  transform-origin: left;
 }
 ul li .slide .content{
   position: absolute;
@@ -65,8 +65,7 @@ ul li .slide img{
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: auto;
+
 }
 ul li input[type="radio"]:checked ~ .slide img{
   animation: animate 40s linear infinite;
@@ -74,5 +73,5 @@ ul li input[type="radio"]:checked ~ .slide img{
 @keyframes animate{
   0%{transform: scale(1);}
   50%{transform: scale(1.5);}
-  150%{transform: scale(1);}
+  100%{transform: scale(1);}
 }
